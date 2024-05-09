@@ -58,8 +58,7 @@ function isValidSession(req) {
 }
 
 function sessionValidation(req,res,next) {
-    if (isValidSession(req)) {
-        next();
+    if (isValidSession(req)) {next();
     }
     else {
         res.redirect('/login');
